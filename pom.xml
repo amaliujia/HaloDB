@@ -88,6 +88,27 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.diffplug.spotless</groupId>
+            <artifactId>spotless-lib</artifactId>
+            <version>1.13.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.diffplug.spotless</groupId>
+            <artifactId>spotless-lib-extra</artifactId>
+            <version>1.13.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.codehaus.plexus</groupId>
+            <artifactId>plexus-resources</artifactId>
+            <version>1.0.1</version>
+            <scope>compile</scope>
+        </dependency>
+
     </dependencies>
 
     <scm>
@@ -127,6 +148,20 @@
                 <version>2.5.3</version>
                 <configuration>
                     <tagNameFormat>@{project.version}</tagNameFormat>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>com.diffplug.spotless</groupId>
+                <artifactId>spotless-maven-plugin</artifactId>
+                <version>1.13.0</version>
+                <configuration>
+                    <java>
+                        <!--<eclipse>-->
+                            <!--<file>${basedir}/eclipse-fmt.xml</file>-->
+                            <!--<version>4.7.1</version>-->
+                        <!--</eclipse>-->
+                    </java>
                 </configuration>
             </plugin>
 
